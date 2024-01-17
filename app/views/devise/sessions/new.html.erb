@@ -1,0 +1,20 @@
+<h1 class="text-4xl font-bold">Log in</h1>
+
+<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name),
+  defaults: { input_html: { class: "form" } }) do |f| %>
+  <div class="form-inputs">
+    <div class="my-5">
+      <%= f.input :email, label: "Username" %>
+    </div>
+    <div class="my-5">
+      <%= f.input :password, label: "Password" %>
+    </div>
+    <div class="my-5">
+      <%= f.input :remember_me, input_html: { class: "inline-flex items-center" }, as: :boolean if devise_mapping.rememberable? %>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, "Log in", class: "btn btn-green" %>
+  </div>
+<% end %>

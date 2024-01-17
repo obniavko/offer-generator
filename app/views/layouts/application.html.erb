@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>OfferGenerator</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+  </head>
+
+  <body>
+    <%= render "shared/header" %>
+    <main>
+      <div class="flash">
+      <%= render 'layouts/flash' %>
+      </div>
+      <div class="container px-5 mx-auto mt-12 mb-24">
+        <%= yield %>
+      </div>
+    </main>
+    <%= render "shared/footer" %>
+  </body>
+</html>
