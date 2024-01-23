@@ -50,3 +50,6 @@ gem "devise", "~> 4.9"
 gem 'simple_form'
 
 gem "tailwindcss-rails", "~> 2.0"
+
+gem "httparty"
+gem "nokogiri"
