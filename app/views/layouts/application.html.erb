@@ -6,9 +6,10 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet" />
   </head>
 
-  <body>
+  <body class="bg-lime-100">
     <%= render "shared/header" %>
     <main>
       <div class="flash">
@@ -18,6 +19,7 @@
         <%= yield %>
       </div>
     </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
     <%= render "shared/footer" %>
   </body>
 </html>

@@ -1,4 +1,4 @@
-<header class="sticky top-0 flex flex-wrap items-center px-4 py-4 bg-neutral-200 dark:bg-neutral-700 lg:px-16">
+<header class="sticky top-0 flex flex-wrap items-center px-4 py-4 bg-lime-400 dark:bg-lime-700 lg:px-16">
   <div class="flex items-center justify-between flex-1">
     <p><strong>Offer Generator</strong></ap>
   </div>
@@ -8,12 +8,12 @@
       <ul class="items-center justify-between pt-4 text-base text-gray-700 md:flex md:pt-0">
       <li> <div class="mx-10 ">
     </div></li>
-        <li><%= link_to "Offers", offers_path, class: "block px-0 py-3 md:p-4"%></li>
+        <li class="inline-block px-2 py-3"><%= link_to "Scrape", root_path, class: "block px-0 py-3 md:p-4"%></li>
         <% if user_signed_in? %>
-          <li><%= button_to "Sign Out", destroy_user_session_path, method: :delete, class: "block px-0 py-3 md:p-4"%></li>
+          <li class="inline-block px-2 py-3"><%= button_to "Sign Out", destroy_user_session_path, method: :delete, class: "block px-0 py-3 md:p-4"%></li>
         <% else %>
-          <li><%= link_to "Sign Up", new_user_registration_path, class: "block px-0 py-3 md:p-4"%></li>
-          <li><%= link_to "Sign In", new_user_session_path, class: "block px-0 py-3 md:p-4"%></li>
+          <li class="inline-block px-2 py-3"><%= link_to "Sign Up", new_user_registration_path, class: "block px-0 py-3 md:p-4"%></li>
+          <li class="inline-block px-2 py-3"><%= link_to "Sign In", new_user_session_path, class: "block px-0 py-3 md:p-4"%></li>
         <% end %>
       </ul>
     </nav>
